@@ -1,5 +1,7 @@
 package br.edu.ifsp.list01;
 
+import java.util.Scanner;
+
 /*
     Uma livraria está fazendo uma promoção para pagamento a vista. O comprador pode escolher entre dois planos de pagamento:
 
@@ -25,12 +27,13 @@ class Ex01 {
     String compute(int qtdLivros) {
         if (qtdLivros <= 0) return "Erro";
 
-        final double precoA = 0.25 * qtdLivros + 7.5;
-        final double precoB = 0.5 * qtdLivros + 2.5;
+        double precoA = 7.5 + 0.25 * qtdLivros;
+        double precoB = 2.5 + 0.5 * qtdLivros;
 
         if (precoA == precoB) return "Indiferente";
+
         if (precoA < precoB) return "Criterio A";
 
-        return  "Criterio B";
+        return "Criterio B";
     }
 }
