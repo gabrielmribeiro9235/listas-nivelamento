@@ -40,6 +40,9 @@ public class Ex06 {
     String compute(double L, double a, double c, double m) {
         if (L < 0 || a < 0 || c < 0 || m <= 0) return "0 0.00";
 
-        return String.format(Locale.US,"%d %.2f", (int) Math.ceil(L * a / m), c * Math.ceil(L * a / m));
+
+        int numeroLatas = (int) Math.ceil(L * a / m);
+
+        return String.format(Locale.US,"%d %.2f", numeroLatas, c * numeroLatas);
     }
 }
